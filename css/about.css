@@ -163,6 +163,10 @@ body{
   height: 70vh;
   
 }
+span{
+  font-family: "Bellefair";
+  font-size: 2rem;
+}
 h1{
   color: black;
   font-size: 60px;
@@ -191,9 +195,6 @@ h2{
   font-weight: 400;
   
 }
-#links a{
-  
-}
 #links>a+a{
   margin-left: 40px;
 }
@@ -208,6 +209,8 @@ i{
   display: flex;
   justify-content: space-evenly;
 padding-top: 25px;
+margin-top: 20px;
+margin-bottom: 60px;
 }
 .gallery img{
   width: 20%;
@@ -278,13 +281,16 @@ form {
 }
 .wrapper, .inner, .fields, form{
   height: 80%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 .field{
   font-size: 8rem;
 }
+body{
+  height: 100vh;
+}
 h2{
-  font-size: 6rem;
+  font-size: 3rem;
 }
 label{
   font-size: 5rem;
@@ -295,7 +301,7 @@ input{
 .leftForm{
   width: 90%;
   height: 85%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
     form > .fields {
       width: calc(100% + 3rem);
@@ -324,8 +330,10 @@ input{
         .gallery{
           height: 70%;
           width: 100%;
-          border: 2px solid pink;
-          
+          /* border: 2px solid pink; */
+          margin-bottom: 0;
+          padding-top: 0;
+          margin-top: 0;
         }
         #scallop{
           object-fit: cover;
@@ -333,40 +341,48 @@ input{
           width: 80%;
         }
         p{
-          font-size: 5rem;
-          padding-top: 20px;
+          font-size: 1.75rem;
+          padding: 30px 10px;
+          margin-top: 0;
+          /* border: 2px solid black; */
+          width: 100%;
+          height: 30%;
+
         }
         header{
-          padding-bottom: 30px;
+          
           height: 10%;
-          border: 2px solid red;
+          /* border: 2px solid red; */
         }
         footer{
-          font-size: 4rem;
+          font-size: 2rem;
           /* padding-top: 10%; */
           height: 5%;
-          border: 2px solid pink;
+          /* border: 2px solid pink; */
         }
         body{
           height: 100%;
-          border: 2px solid green;
+          /* border: 2px solid green; */
         }
         html{
           height: 100%;
         }
         h1{
-          font-size: 10rem;
+          font-size: 4rem;
+          height: 100%;
+          line-height: 100%;
+          /* border: 2px solid pink; */
         }
         main{
           height: 85%;
-          border: 2px solid purple;
+          /* border: 2px solid purple; */
         }
         .left, .right{
           width: 100%;
         }
         .left{
           height: 40%;
-          border: 2px solid red;
+          /* border: 2px solid red; */
           display: flex;
           justify-content: center;
         }
@@ -377,9 +393,11 @@ input{
         }
         .right{
           height: 40%;
-          border: 2px solid blue;
+          /* border: 2px solid blue; */
         }
-
+.navbar{
+  padding-top: 10px;
+}
   }
 
 label {
