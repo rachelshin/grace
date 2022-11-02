@@ -1,0 +1,344 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+}
+a:hover{
+  text-decoration: underline;
+  
+}
+/******************************************
+/* NAV
+/*******************************************/
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  border: 2px solid blue;
+}
+.navbar {
+  opacity: 0.95;
+  /* padding-top: 5px; */
+  border: 2px solid green;
+  height: 100%;
+  display: flex;
+}
+
+.navbar-container input[type="checkbox"],
+.navbar-container .hamburger-lines {
+  display: block;
+}
+
+.navbar-container {
+  
+  position: relative;
+  height: 50px;
+  border: 2px solid lawngreen;
+  width: 100%;
+  display: flex;
+  
+}
+
+.navbar-container input[type="checkbox"] {
+  position: absolute;
+  display: block;
+  height: 25px;
+  width: 30px;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+  opacity: 0;
+  border: 2px solid magenta;
+}
+
+.navbar-container .hamburger-lines {
+  display: block;
+  height: 23px;
+  width: 35px;
+  position: absolute;
+  /* position of lines */
+  top: 10px;
+  left: 5px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-left: 10px; */
+}
+
+.navbar-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: black;
+}
+
+.navbar-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 50px;
+  background: rgb(195	174	154);
+  height: 45vh;
+  max-width: 260px;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 30px;
+  transition: transform 0.8s ease-in-out;
+  box-shadow: 5px 0px 10px 0px #aaa;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: "Work Sans";
+  text-transform: lowercase;
+}
+
+
+
+.navbar-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(35deg);
+}
+
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-35deg);
+}
+ul{
+  list-style: none;
+}
+
+/* Main Layout */
+
+header{
+  height: 15%;
+  border: 1px solid blue;
+}
+
+h1{
+  color: black;
+  font-size: 60px;
+  font-family: "Bellefair";
+  font-weight: 200;
+  border: 1px solid purple;
+ 
+  text-align: center;
+}
+.mainContent{
+  height: 80%;
+  border: 2px solid pink;
+}
+.left, .right{
+  width: 50%;
+  float: left;
+  border: 2px solid blue;
+  height: 80%;
+}
+.left img{
+  height: 100%;
+  
+}
+
+.right{
+  display:flex;
+  align-items: center;
+  
+  height: 100%;
+}
+p{
+  font-size: 2rem;
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+}
+footer{
+  clear: both;
+}
+footer{
+  font-size: 1.5rem;
+  height: 5%;
+  border: 2px solid gray;
+}
+footer span{
+  font-family: "Bellefair";
+  font-size: 2rem;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html{
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+body{
+  border: 2px solid green;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+}
+
+
+
+/******************************************
+/* MEDIA QUERY
+/*******************************************/
+
+ /* @media screen and (max-width: 1000px) {
+
+.wrapper, .inner, .fields, form{
+  height: 80%;
+  /* border: 2px solid green; */
+}
+.field{
+  font-size: 8rem;
+}
+body{
+  height: 100vh;
+}
+h2{
+  font-size: 3rem;
+}
+label{
+  font-size: 5rem;
+}
+input{
+  height: 60px;
+}
+.leftForm{
+  width: 90%;
+  height: 85%;
+  /* border: 2px solid red; */
+}
+    form > .fields {
+      width: calc(100% + 3rem);
+      margin: -1.5rem 0 2rem -1.5rem;
+    }
+
+      form > .fields > .field {
+        padding: 1.5rem 0 0 1.5rem;
+        width: calc(100% - 1.5rem);
+      }
+
+        form > .fields > .field.half {
+          width: calc(100% - 1.5rem);
+        }
+
+        form > .fields > .field.third {
+          width: calc(100% - 1.5rem);
+        }
+
+        form > .fields > .field.quarter {
+          width: calc(100% - 1.5rem);
+        }
+        #crab, #seaweed{
+          display: none;
+        }
+        .gallery{
+          height: 70%;
+          width: 100%;
+          /* border: 2px solid pink; */
+          margin-bottom: 0;
+          padding-top: 0;
+          margin-top: 0;
+        }
+        #scallop{
+          object-fit: cover;
+          height: 100%;
+          width: 80%;
+        }
+        p{
+          font-size: 1.75rem;
+          padding: 30px 10px;
+          margin-top: 0;
+          /* border: 2px solid black; */
+          width: 100%;
+          height: 30%;
+
+        }
+        header{
+          
+          height: 10%;
+          /* border: 2px solid red; */
+        }
+        footer{
+          font-size: 2rem;
+          /* padding-top: 10%; */
+          height: 5%;
+          /* border: 2px solid pink; */
+        }
+        body{
+          height: 100%;
+          /* border: 2px solid green; */
+        }
+        html{
+          height: 100%;
+        }
+        h1{
+          font-size: 4rem;
+          height: 100%;
+          line-height: 100%;
+          /* border: 2px solid pink; */
+        }
+        main{
+          height: 85%;
+          /* border: 2px solid purple; */
+        }
+        .left, .right{
+          width: 100%;
+          border: 2px solid red;
+          margin:0;
+        }
+        .left{
+          height: 40%;
+          /* border: 2px solid red; */
+          display: flex;
+          justify-content: center;
+        }
+        .left img{
+          object-fit: cover;
+          height: 100%;
+          width: 80%;
+        }
+        .right{
+          height: 40%;
+          /* border: 2px solid blue; */
+          padding-top: 0;
+        }
+.navbar{
+  padding-top: 10px;
+}
+  }
+ */
